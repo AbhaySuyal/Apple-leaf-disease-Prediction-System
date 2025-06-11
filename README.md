@@ -23,6 +23,10 @@ This project uses a Convolutional Neural Network (CNN) built with TensorFlow/Ker
 
 You’ll need to download the dataset from Kaggle and extract the contents.
 
+### 🖼️ Sample Image
+
+![Sample Apple Leaf](sample_leaf.jpg)
+
 ---
 
 ## 📦 Requirements
@@ -53,8 +57,7 @@ apple-leaf-disease-prediction/
 ├── dataset/
 │   └── train/ (images)
 │   └── train.csv
-├── model/
-│   └── apple_leaf_model.h5
+├── sample_leaf.jpg
 ├── app.py
 ├── train_model.py
 ├── requirements.txt
@@ -65,35 +68,36 @@ apple-leaf-disease-prediction/
 
 ## ⚙️ Training the Model
 
-To train the model from scratch:
+To train the model from scratch, run:
 
 ```bash
 python train_model.py
 ```
 
-This will:
-- Load images and labels
-- Preprocess data
-- Train a CNN
-- Save the model as `model/apple_leaf_model.h5`
+This script will:
+- Load and preprocess images and labels
+- Train a CNN model
+- Save the model as `apple_leaf_model.h5`
+
+You can then use this file for inference in the Streamlit web app.
 
 ---
 
 ## 🌐 Streamlit Web App
 
-To run the web application:
+To launch the web application:
 
 ```bash
 streamlit run app.py
 ```
 
-Then open the URL provided in the terminal to upload an image and view predictions in the browser.
+Upload an apple leaf image, and the model will classify it into one of the disease categories.
 
 ---
 
 ## 📸 Example Prediction
 
-Upload a sample leaf image using the Streamlit interface. The model will return one of:
+The model will return one of the following based on the uploaded leaf image:
 
 - ✅ Healthy
 - ⚠️ Apple Scab
